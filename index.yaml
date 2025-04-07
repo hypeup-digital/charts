@@ -1,3 +1,15 @@
 apiVersion: v1
-entries: {}
-generated: "2025-04-07T16:59:53.123957621+02:00"
+entries:
+  imgproxy:
+  - apiVersion: v2
+    appVersion: v3.28.0
+    created: "2025-04-07T15:06:54.245678782Z"
+    description: Imgproxy is a fast and secure standalone server for resizing and
+      converting remote images.
+    digest: 34613dd261ec7774f41ca4d5ea1f7d1e9487f2dfdc0f598ccea807abeee1bbd7
+    name: imgproxy
+    type: application
+    urls:
+    - https://github.com/hypeup-digital/charts/releases/download/imgproxy-0.1.0/imgproxy-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-04-07T15:06:54.245685174Z"
