@@ -12,4 +12,20 @@ entries:
     urls:
     - https://github.com/hypeup-digital/charts/releases/download/imgproxy-0.1.0/imgproxy-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-07T15:06:54.245685174Z"
+  metabase:
+  - apiVersion: v2
+    appVersion: v0.54.2.1
+    created: "2025-04-10T07:38:48.251281997Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 16.6.2
+    description: Open source business intelligence, dashboards, and data visualizations
+    digest: f46c74b922ed749879acd08d7e7cccc124aa4a29a2ba48e7211a769432392bcd
+    name: metabase
+    type: application
+    urls:
+    - https://github.com/hypeup-digital/charts/releases/download/metabase-0.1.0/metabase-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-04-10T07:38:48.251291635Z"
