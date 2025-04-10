@@ -3,6 +3,17 @@ entries:
   imgproxy:
   - apiVersion: v2
     appVersion: v3.28.0
+    created: "2025-04-10T08:27:55.660930867Z"
+    description: Imgproxy is a fast and secure standalone server for resizing and
+      converting remote images.
+    digest: 2b002e5a875d61cb202d7030da4c45ab70118f55e787be848dbaf3be4550bb6f
+    name: imgproxy
+    type: application
+    urls:
+    - https://github.com/hypeup-digital/charts/releases/download/imgproxy-0.1.1/imgproxy-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: v3.28.0
     created: "2025-04-07T15:06:54.245678782Z"
     description: Imgproxy is a fast and secure standalone server for resizing and
       converting remote images.
@@ -13,6 +24,21 @@ entries:
     - https://github.com/hypeup-digital/charts/releases/download/imgproxy-0.1.0/imgproxy-0.1.0.tgz
     version: 0.1.0
   metabase:
+  - apiVersion: v2
+    appVersion: v0.54.2.1
+    created: "2025-04-10T08:27:55.862267233Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 16.6.2
+    description: Open source business intelligence, dashboards, and data visualizations
+    digest: d760e5744f1da91dab92c99201b7197eb0004d3180b329f213a2f72439071026
+    name: metabase
+    type: application
+    urls:
+    - https://github.com/hypeup-digital/charts/releases/download/metabase-0.1.1/metabase-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     appVersion: v0.54.2.1
     created: "2025-04-10T07:38:48.251281997Z"
@@ -28,4 +54,4 @@ entries:
     urls:
     - https://github.com/hypeup-digital/charts/releases/download/metabase-0.1.0/metabase-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-10T07:38:48.251291635Z"
+generated: "2025-04-10T08:27:55.862282041Z"
