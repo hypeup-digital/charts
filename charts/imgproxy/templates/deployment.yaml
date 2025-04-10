@@ -63,7 +63,7 @@ spec:
               value: {{ .value | quote }}
               {{- else if .valueFrom }}
               valueFrom:
-                {{- toYaml .valueFrom | nindent 14 }}
+                {{- toYaml .valueFrom | nindent 16 }}
               {{- end }}
             {{- end }}
       {{- with .Values.nodeSelector }}
