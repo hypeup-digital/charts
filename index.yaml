@@ -54,4 +54,20 @@ entries:
     urls:
     - https://github.com/hypeup-digital/charts/releases/download/metabase-0.1.0/metabase-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-10T08:27:55.862282041Z"
+  vaultwarden:
+  - apiVersion: v2
+    appVersion: 1.33.2
+    created: "2025-05-09T12:22:01.457766186Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 16.7.1
+    description: Unofficial Bitwarden compatible server written in Rust
+    digest: eb2a61489bed6109a12351fda458f0694810b804327f982009a227d7cd6250a3
+    name: vaultwarden
+    type: application
+    urls:
+    - https://github.com/hypeup-digital/charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-05-09T12:22:01.457782066Z"
