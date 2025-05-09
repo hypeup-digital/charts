@@ -57,6 +57,21 @@ entries:
   vaultwarden:
   - apiVersion: v2
     appVersion: 1.33.2
+    created: "2025-05-09T14:11:52.346018786Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 16.7.1
+    description: Unofficial Bitwarden compatible server written in Rust
+    digest: 2cfde72d66bd1ed4b8b2c87c39834a49c7eddcd90466ab565aa35f81013aab6e
+    name: vaultwarden
+    type: application
+    urls:
+    - https://github.com/hypeup-digital/charts/releases/download/vaultwarden-0.1.1/vaultwarden-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.33.2
     created: "2025-05-09T12:22:01.457766186Z"
     dependencies:
     - condition: postgresql.enabled
@@ -70,4 +85,4 @@ entries:
     urls:
     - https://github.com/hypeup-digital/charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-09T12:22:01.457782066Z"
+generated: "2025-05-09T14:11:52.346051748Z"
