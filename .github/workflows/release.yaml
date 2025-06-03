@@ -26,6 +26,7 @@ jobs:
         run: |
           mkdir -p charts/app-template
           cp -r vendor/bjw-s/charts/other/app-template/* charts/app-template/
+          rm charts/app-template/LICENSE
           cp vendor/bjw-s/LICENSE charts/app-template/LICENSE
 
       - name: Stage the vendored charts
