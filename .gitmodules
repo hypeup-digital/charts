@@ -1,0 +1,3 @@
+[submodule "vendor/bjw-s"]
+	path = vendor/bjw-s
+	url = https://github.com/hypeup-digital/bjw-s-helm-charts.git

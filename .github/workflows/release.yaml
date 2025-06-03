@@ -15,11 +15,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: recursive
 
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Copy vendored charts to charts directory
+        run: |
+          mkdir -p charts/app-template
+          cp -r vendor/bjw-s/charts/other/app-template/* charts/app-template/
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
