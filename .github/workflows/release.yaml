@@ -27,7 +27,13 @@ jobs:
           mkdir -p charts/app-template
           cp -r vendor/bjw-s/charts/other/app-template/* charts/app-template/
 
+      - name: Stage the vendored charts
+        run: |
+          git add charts/app-template
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          skip_existing: true
