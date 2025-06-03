@@ -22,17 +22,20 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      # This is a workaround for chart-releaser to pick up the vendored charts.
+      # We also need to replace the symlink to the LICENSE file with the actual
+      # LICENSE file from the vendored repository, since we only copy a subdirectory
+      # into our 'charts' directory, which effectively breaks the symlink.
+      # After copying all files, we stage them so that chart-releaser sees
+      # them after diffing the current state against the last commit.
       - name: Copy vendored charts to charts directory
         run: |
           mkdir -p charts/app-template
           cp -r vendor/bjw-s/charts/other/app-template/* charts/app-template/
           rm charts/app-template/LICENSE
           cp vendor/bjw-s/LICENSE charts/app-template/LICENSE
-
-      - name: Stage the vendored charts
-        run: |
           git add charts/app-template
-
+          
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
         env:
